@@ -84,7 +84,7 @@ function runSearch() {
         );
     });
 
-    document.getElementById("search-summary").innerHTML =
+    document.getElementById("search-summary").textContent =
         "Query: " + term + " | Records checked: " + registry.length;
 
     var safe = sanitise(term);
