@@ -103,20 +103,37 @@ function runSearch() {
             resultsHtml +=
                 '<div class="result-row">' +
                 '<span class="handle">' +
-                entry.handle +
+                '<p class="handleText"></p>' +
+                
                 "</span>" +
                 '<span class="region">' +
-                entry.region +
+                '<p class="regionText"></p>' +
+
                 "</span>" +
                 '<span class="joined">' +
-                entry.joined +
+                '<p class="joinedText"></p>' +
+
                 "</span>" +
                 '<span class="speciality">' +
-                entry.speciality +
+                '<p class="specialityText"></p>' +
+
                 "</span>" +
                 "</div>";
         });
-        document.getElementById("results-body").innerHTML = resultsHtml;
+
+        results.innerHTML = resultsHtml;
+
+        var handlesPar = results.querySelectorAll(".handleText");
+        var regionPar = results.querySelectorAll(".regionText");
+        var joinedPar = results.querySelectorAll(".joinedText");
+        var specialityPar = results.querySelectorAll(".specialityText");
+
+        results.innerHTML = resultsHtml;
+        handlesPar.textContent = entry.handle
+        regionPar.textContent = entry.region
+        joinedPar.textContent = entry.joined
+        specialityPar.textContent = entry.speciality
+        
     }
 }
 
