@@ -88,7 +88,7 @@ function runSearch() {
         "Query: " + term + " | Records checked: " + registry.length;
 
     var safe = sanitise(term);
-    document.getElementById("results-heading").innerHTML =
+    document.getElementById("results-heading").textContent =
         "Results for: " + term;
 
     document.getElementById("result-count").textContent =
